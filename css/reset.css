@@ -133,10 +133,3 @@ table {
   border-spacing: 0;
 }
 
-/* 
-    If you want to style the 500x500 canvas you sketch is in, add
-    CSS to the main tag, below.  You might want to add a border, 
-    change alignment or add padding for example.
-*/
-main {
-}

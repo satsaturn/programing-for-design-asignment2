@@ -1,59 +1,60 @@
-let ballx = 50;
-let bally;// can't have a value yet becuse there is no canvas
-let balld = 40;
-let speedx = 5;
-let speedy = 5;
+let ball = {
+  x: 50,
+  y: null, // not set yet becuse no canvase yet 
+  d: 40,
+  speedx: 5,
+  speedy: 5,
+  c: "yellow",
+};
+
 let score = 0;
-let ballc = "yellow";
 
 function setup() {
   createCanvas(600, 400);
-  bally = height / 2;
+  ball.y = height / 2; //sets y becuse we have canvas 
 }
 
 function draw() {
   background(220);
-//make cort
+  //make cort
   fill("white");
   rect(width / 2 - 5, 0, 10, 400);
   fill("green");
   rect(width - 100, 0, 100, 400);
-
-  //make ball
-  fill(ballc);
-  circle(ballx, bally, balld);
-  // makes ball move x
-  ballx += speedx;
-  // makes ball move y
-  bally += speedy;
-// make ball bounce of top and bottom
-  if (bally > height - balld / 2 || bally < 0 + balld / 2) {
-    speedy *= -1;
+  
+  //make ball.
+  fill(ball.c);
+  circle(ball.x, ball.y, ball.d);
+  // makes ball. move x
+  ball.x += ball.speedx;
+  // makes ball. move y
+  ball.y += ball.speedy;
+  // make ball. bounce of top and bottom
+  if (ball.y > height - ball.d / 2 || ball.y < 0 + ball.d / 2) {
+    ball.speedy *= -1;
   }
   // reset stuff when you fail
-  if (ballx > width + balld / 2) {
-    ballx = 50;
+  if (ball.x > width + ball.d / 2) {
+    ball.x = 50;
     score = 0;
-    speedx = 5;
+    ball.speedx = 5;
   }
 
- // make things change when you win
-  if (ballx < 0 + balld / 2) {
-    speedx *= -1;
+  // make things change when you win
+  if (ball.x < 0 + ball.d / 2) {
+    ball.speedx *= -1;
     score++;
-    speedx++;
-    speedy++;
+    ball.speedx++;
+    ball.speedy++;
   }
-// writes text 
+  // writes text
   fill("black");
   textSize(20);
-  text("handball, press space when ball", 10, 25);
-  text("is in green box to hit it back", 10, 50);
-  text("score " + score, 10, 75);
+  text("score " + score, 10, 25);
 }
-// makes it so uo can hit things 
+// makes it so uo can hit things
 function keyPressed() {
-  if (key == " " && ballx + balld / 2 > width - 100) {
-    speedx *= -1;
+  if (key == " " && ball.x + ball.d / 2 > width - 100) {
+    ball.speedx *= -1;
   }
 }

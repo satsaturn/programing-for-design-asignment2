@@ -9,7 +9,7 @@ let ball_vy = [];
 let ball_b = [];
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(700, 700);
   // set some veriables
   ball_d = 100;
 
@@ -19,7 +19,7 @@ function setup() {
     ball_vx[i] = round(random(2, 10));
     ball_vy[i] = 0;
     ball_y[i] = height / 2;
-    ball_b[i] = round(random(10, 40));
+    ball_b[i] = round(random(10, 35));
   }
 }
 

@@ -1,0 +1,68 @@
+:root {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  height: 100%;
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  list-style: none;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+h2 {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+ul a {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  TEXT-TRANSFORM: uppercase;
+}
+ul a:hover {
+  color: rgb(143, 163, 219);
+}
+nav {
+  background-image: url("/img/tape.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+}
+main {
+  background-image: url("/img/paper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+
+}
+
+canvas {
+  display: block;
+  border: 2px solid black;
+}
+
