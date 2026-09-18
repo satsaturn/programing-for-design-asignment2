@@ -15,7 +15,7 @@ function setup() {
     circle(0, 200, 140); // makes the circle at the place
   }
   fill("white");
-  circle(0, 0, 150);
+  circle(0, 0, 170);
   fill("blue");
-  circle(0, 0, 80);
+  circle(0, 0, 120);
 }
